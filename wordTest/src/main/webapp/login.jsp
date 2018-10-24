@@ -205,6 +205,15 @@ h1:before {
 </style>
 
 <script type="text/javascript">
+
+function gopagePost() { 
+	//0클라이언트 부분에서의 에러검증 코드 자리 
+	document.myForm.action="./main.jsp"; 
+	document.myForm.method="post"; 
+	document.myForm.submit(); 
+	}
+
+	
 	
 </script>
 
@@ -212,14 +221,14 @@ h1:before {
 
 
 
-<!-- =============================================</head> 선까지====================================================================== -->
+<!-- =============================================<body태그 시작>====================================================================== -->
 
 
 <body>
 
 
 	<header>
-		<h1 data-heading="TEST">English Test</h1>
+		<h1 data-heading="TEST" >English Test</h1>
 		
 	</header>
 	
@@ -239,8 +248,11 @@ h1:before {
 		
 		
 		<!--End of Button 5 -->
-		 <div class = "buttonAlign">
-		 <button type="button" class="btn btn-5">Login</button>
+		 <div class = "buttonAlign">		 
+		 	<form name="myForm">
+		 	 	<button type="button" class="btn btn-5" onclick="gopagePost()">Login</button>
+		 	</form>
+		
 		 </div>
     		
 	</div>
